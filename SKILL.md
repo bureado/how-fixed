@@ -102,8 +102,6 @@ Search for additional context and fix commits:
 
 **Important:** Don't just check if patches exist - fetch and analyze their contents.
 
-Also note: Azure Linux has a `fasttrack` release system. Some specfiles might be changed in the `3.0` branch (used in the examples below) or in the appropriate `fasttrack/...` branch. Make sure to check for both to complete your assessment.
-
 1. **Find and fetch the spec file:**
    ```bash
    PACKAGE="openssl"
@@ -180,7 +178,7 @@ Confirm the fixed package is published:
 
 ### Step 7: Summarize Findings
 
-Provide a clear summary including data from all sources:
+Provide a clear summary including data from all sources. Make sure sources are mentioned, and, when a link is available (for example to patched specfiles, PRs, new RPMs in repos, enriched vulnerability information, etc.), link to that in the summary Markdown.
 
 | Field | Value | Source |
 |-------|-------|--------|
@@ -243,3 +241,4 @@ See [references/EXAMPLE-ANALYSIS.md](references/EXAMPLE-ANALYSIS.md) for a compl
 - **Security patches** typically increment only the release number (e.g., 3.3.5-2 → 3.3.5-3)
 - **Look for `[AutoPR-Security]`** in commit messages for automated security fixes
 - **One CVE can affect multiple packages** (e.g., libpcap AND nmap for CVE-2025-11961)
+- **Azure Linux has a `fasttrack` release system**: some specfiles might be changed in the `3.0` branch (used in the examples below) or in the appropriate `fasttrack/...` branch. Make sure to check for both to complete your assessment.
