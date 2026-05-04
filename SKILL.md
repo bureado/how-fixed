@@ -102,6 +102,8 @@ Search for additional context and fix commits:
 
 **Important:** Don't just check if patches exist - fetch and analyze their contents.
 
+Also note: Azure Linux has a `fasttrack` release system. Some specfiles might be changed in the `3.0` branch (used in the examples below) or in the appropriate `fasttrack/...` branch. Make sure to check for both to complete your assessment.
+
 1. **Find and fetch the spec file:**
    ```bash
    PACKAGE="openssl"
